@@ -2,15 +2,15 @@
 
 NAME = test
 
-SRC = test.cpp
+SRC = test.cpp sample.class.cpp
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-%.o: %.c
+%.o: %.cpp
 	@echo "$(GREEN)Compiling:$(BLUE) $< $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -c $< -o $@
 
@@ -18,9 +18,9 @@ CFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
-$(NAME):
-	@echo -e "Program: "
-	$(WHITE) $(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(DEF_COLOR)
+$(NAME): $(OBJ)
+	@echo "$(MAGENTA)Program: $(WHITE)$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(DEF_COLOR)"
+	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
 
 clean:
 	rm $(OBJ)
