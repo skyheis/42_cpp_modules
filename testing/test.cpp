@@ -11,6 +11,28 @@ int	main(int ac, char **av)
 	std::cout << loli.getninst() << std::endl;
 	std::cout << std::endl;
 
+	Sample *hehe = &daje;
+	(void) hehe;
+
+	int		Sample::*p = NULL;
+	void	(Sample::*f)(void);
+
+	p = &Sample::a2;
+	std::cout << "& of p:  " << &p << std::endl;
+	/* non usare il valore di p direttamente */
+	std::cout << "* of p:  " << p << std::endl;
+	std::cout << "& of a2: " << &daje.a2 << std::endl;
+	std::cout << "* of a2: " << daje.a2 << std::endl;
+	std::cout << "Value of memeber a2: " << daje.a2 << std::endl;
+	daje.*p = 111;
+	std::cout << "Value of memeber a2: " << daje.a2 << std::endl;
+	hehe->*p = 222;
+	std::cout << "Value of memeber a2: " << daje.a2 << std::endl;
+	f = &Sample::publbar;
+	(daje.*f)();
+	(hehe->*f)();
+	std::cout << std::endl;
+	std::cout << std::endl;
 
 	if (ac != 1)
 		for (int i = 0; av[1][i]; i++)
