@@ -1,8 +1,8 @@
 ###### VARIABLE ######
 
-NAME = test
+NAME = phonebook
 
-SRC = test.cpp sample.class.cpp
+SRC = main.cpp contact.class.cpp phonebook.class.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

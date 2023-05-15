@@ -1,8 +1,8 @@
 ###### VARIABLE ######
 
-NAME = test
+NAME = megaphone
 
-SRC = test.cpp sample.class.cpp
+SRC = megaphone.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

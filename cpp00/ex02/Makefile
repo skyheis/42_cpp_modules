@@ -2,7 +2,7 @@
 
 NAME = test
 
-SRC = test.cpp sample.class.cpp
+SRC = tests.cpp Account.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
