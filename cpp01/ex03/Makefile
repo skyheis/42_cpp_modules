@@ -1,8 +1,8 @@
 ###### VARIABLE ######
 
-NAME = phonebook
+NAME = violence
 
-SRC = main.cpp contact.class.cpp phonebook.class.cpp
+SRC = main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

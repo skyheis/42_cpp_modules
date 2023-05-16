@@ -21,6 +21,7 @@ all: $(NAME)
 $(NAME): $(OBJ)
 	@echo "$(MAGENTA)Program: $(WHITE)$(CC) $(CFLAGS) -o $(NAME) $(OBJ) $(DEF_COLOR)"
 	@$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+	@echo "$(MAGENTA)Program name: $(WHITE)$(NAME)$(DEF_COLOR)"
 
 clean:
 	@rm -f $(OBJ)

@@ -1,37 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   HumanB.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 15:32:02 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 09:21:20 by ggiannit         ###   ########.fr       */
+/*   Created: 2023/05/16 12:12:10 by ggiannit          #+#    #+#             */
+/*   Updated: 2023/05/16 12:43:41 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.class.hpp"
+#ifndef HUMANB_HPP
+# define HUMANB_HPP
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+#include "Weapon.hpp"
 
-class   PhoneBook {
+class HumanB {
 
 public:
- 
-    PhoneBook(void);
-    ~PhoneBook(void);
 
-    void        addContact(void);
-    void        search(void) const;
-    void        printCont(int i) const;
-    int         getI(void) const;
+    HumanB(std::string name);
+    ~HumanB(void);
+
+    void attack(void) const;
+    void setWeapon(Weapon &weap);
+    void unsetWeapon(void);
 
 private:
 
-    Contact book[8];
-    static int  _i;
+    std::string _name;
+    Weapon *_weapon;
 
 };
 
-#endif /* PHONEBOOK_CLASS_HPP */
+#endif /* HUMANB_HPP */

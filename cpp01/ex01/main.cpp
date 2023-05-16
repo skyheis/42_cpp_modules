@@ -1,37 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.class.hpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 15:32:02 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 09:21:20 by ggiannit         ###   ########.fr       */
+/*   Created: 2023/05/16 11:09:56 by ggiannit          #+#    #+#             */
+/*   Updated: 2023/05/16 11:20:55 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "contact.class.hpp"
+#include "Zombie.hpp"
 
-#ifndef PHONEBOOK_CLASS_HPP
-# define PHONEBOOK_CLASS_HPP
+int main(void)
+{
+    int i = 0;
+    //Zombie one("Bob");
+    Zombie *horde = zombieHorde(8, "Jim");
 
-class   PhoneBook {
-
-public:
- 
-    PhoneBook(void);
-    ~PhoneBook(void);
-
-    void        addContact(void);
-    void        search(void) const;
-    void        printCont(int i) const;
-    int         getI(void) const;
-
-private:
-
-    Contact book[8];
-    static int  _i;
-
-};
-
-#endif /* PHONEBOOK_CLASS_HPP */
+    for (i = 0; i < 8; i++)
+    {
+        horde[i].announce();
+    }
+    delete [] horde;
+}

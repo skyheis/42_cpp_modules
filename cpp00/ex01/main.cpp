@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:32:15 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/15 15:32:23 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/16 09:21:30 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int main(void)
     while (std::getline(std::cin, str_in) && str_in.compare("EXIT"))
     {
         if (!str_in.compare("ADD"))
-            loli.addcontact();
+            loli.addContact();
         else if(!str_in.compare("SEARCH"))
         {
             loli.search();
@@ -46,7 +46,7 @@ int main(void)
                 std::getline(std::cin, str_in);
             }
             if (ft_stoindex(str_in))
-                loli.printcont(ft_stoindex(str_in));
+                loli.printCont(ft_stoindex(str_in));
         }
         std::cout << "phonebook > ";
     }

@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:31:59 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/15 15:31:59 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/16 09:19:00 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,18 +39,18 @@ void Contact::init(int i) {
     ft_fill_line("Nickname: ", &this->_nickname);
 }
 
-int Contact::getind(void) const {
+int Contact::getInd(void) const {
     return (this->_index);
 }
 
-std::string Contact::getfirst(void) const {
+std::string Contact::getFirst(void) const {
     return (this->_firstname);
 }
 
-std::string Contact::getlast(void) const {
+std::string Contact::getLast(void) const {
     return (this->_lastname);
 }
 
-std::string Contact::getnick(void) const {
+std::string Contact::getNick(void) const {
     return (this->_nickname);
 }

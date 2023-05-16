@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:32:04 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/15 15:32:05 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/16 09:21:10 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ PhoneBook::~PhoneBook(void) {
     return ;
 }
 
-void PhoneBook::addcontact(void) {
+void PhoneBook::addContact(void) {
     this->book[this->_i % 8].init((this->_i % 8) + 1);
     this->_i++;
 }
@@ -46,25 +46,25 @@ void PhoneBook::search(void) const {
     std::cout << "|---------|----------|----------|----------|" << std::endl;
     while (i < 8 && i < this->_i)
     {
-        std::cout << "|    " << this->book[i].getind() << "    |";
-        ft_print_string(this->book[i].getfirst());
+        std::cout << "|    " << this->book[i].getInd() << "    |";
+        ft_print_string(this->book[i].getFirst());
         std::cout << "|";
-        ft_print_string(this->book[i].getlast());
+        ft_print_string(this->book[i].getLast());
         std::cout << "|";
-        ft_print_string(this->book[i].getnick());
+        ft_print_string(this->book[i].getNick());
         std::cout << "|" << std::endl;
         i++;
     }
     std::cout << "|---------|----------|----------|----------|" << std::endl;
 }
 
-void PhoneBook::printcont(int i) const {
+void PhoneBook::printCont(int i) const {
     if (i > this->_i)
         return ;
-    std::cout << "Index: " << this->book[i].getind() << std::endl;
-    std::cout << "Firstname: " << this->book[i].getfirst() << std::endl;
-    std::cout << "Lastname: " << this->book[i].getlast() << std::endl;
-    std::cout << "Nickname: " << this->book[i].getnick() << std::endl;
+    std::cout << "Index: " << this->book[i].getInd() << std::endl;
+    std::cout << "Firstname: " << this->book[i].getFirst() << std::endl;
+    std::cout << "Lastname: " << this->book[i].getLast() << std::endl;
+    std::cout << "Nickname: " << this->book[i].getNick() << std::endl;
 }
 
 int PhoneBook::getI(void) const {

@@ -1,40 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   contact.class.hpp                                  :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/15 15:31:56 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 09:19:18 by ggiannit         ###   ########.fr       */
+/*   Created: 2023/05/16 12:05:13 by ggiannit          #+#    #+#             */
+/*   Updated: 2023/05/16 12:46:38 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 
 #include <iostream>
 #include <string>
 
-#ifndef CONTACT_CLASS_HPP
-# define CONTACT_CLASS_HPP
-
-class Contact {
+class Weapon {
 
 public:
 
-    Contact(void);
-    ~Contact(void);
+    Weapon(std::string type);
+    ~Weapon(void);
 
-    void        init(int i);
-    int         getInd(void) const;
-    std::string getFirst(void) const;
-    std::string getLast(void) const;
-    std::string getNick(void) const;
+    const std::string &getType(void) const;
+    void setType(std::string type);
 
 private:
 
-    int         _index;
-    std::string _firstname;
-    std::string _lastname;
-    std::string _nickname;
+    std::string _type;
 };
 
-#endif /* CONTACT_CLASS_HPP */
+#endif /* WEAPON_HPP */

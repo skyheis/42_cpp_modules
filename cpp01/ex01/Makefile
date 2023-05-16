@@ -1,8 +1,8 @@
 ###### VARIABLE ######
 
-NAME = phonebook
+NAME = horde
 
-SRC = main.cpp contact.class.cpp phonebook.class.cpp
+SRC = main.cpp Zombie.cpp zombieHorde.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
