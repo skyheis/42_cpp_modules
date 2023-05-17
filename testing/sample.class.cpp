@@ -2,7 +2,11 @@
 
 int Sample::_ninst = 0;
 
-Sample::Sample(char p1, int p2, float const p3) : a2(p2), a3(p3), a4(123) {
+Sample::Sample(void) : _z1(0) {
+    return ;
+}
+
+Sample::Sample(char p1, int p2, float const p3) : a2(p2),  a4(123) {
     std::cout << "Construct " << this << std::endl;
     this->foo = 42;
     this->a1 = p1;
@@ -10,6 +14,12 @@ Sample::Sample(char p1, int p2, float const p3) : a2(p2), a3(p3), a4(123) {
 
     return ;
 }
+
+Sample::Sample(Sample const & src) {
+    *this = src;    
+    return;
+}
+
 
 Sample::~Sample(void) {
     std::cout << "Destruct " << this << std::endl;

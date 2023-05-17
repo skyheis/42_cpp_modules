@@ -12,12 +12,15 @@ public:
 
     char        a1;
     int         a2;
-    float const a3;
     int         a4;
     int         foo;
 
+    Sample(void);                               // Canonical
     Sample(char p1, int p2, float const p3);
-    ~Sample(void);
+    Sample(Sample const & src);                 // Canonical
+    ~Sample(void);                              // Canonical
+
+    Sample& operator=(Sample const & rhs);      // Canonical
 
     void    publbar(void);
     int     getz1(void) const;

@@ -47,11 +47,9 @@ int	main(int ac, char **av)
 
 	std::cout << "daje.a1: " << daje.a1 << std::endl;
 	std::cout << "daje.a2: " << daje.a2 << std::endl;
-	std::cout << "daje.a3: " << daje.a3 << std::endl;
 	std::cout << "daje.a4: " << daje.a4 << std::endl;
 	std::cout << "loli.a1: " << loli.a1 << std::endl;
 	std::cout << "loli.a2: " << loli.a2 << std::endl;
-	std::cout << "loli.a3: " << loli.a3 << std::endl;
 	std::cout << "loli.a4: " << loli.a4 << std::endl;
 	std::cout << std::endl;
 
