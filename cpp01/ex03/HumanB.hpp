@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:12:10 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 12:43:41 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 19:55:13 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ public:
     ~HumanB(void);
 
     void attack(void) const;
+	Weapon &getWeapon(void) const;
     void setWeapon(Weapon &weap);
     void unsetWeapon(void);
 

@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 15:20:26 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 15:24:57 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 19:54:21 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void    ft_chech_args(int ac)
 void    ft_chech_file(std::ifstream &inf)
 {
     if (inf.fail()){
-        std::cerr << "The file doesn't exist" << std::endl;
+        std::cerr << "The file doesn't exist or can't be readed :c" << std::endl;
         inf.close();
         exit(1);
     }

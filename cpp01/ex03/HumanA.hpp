@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 12:12:10 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 12:29:50 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 19:58:10 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,10 @@ public:
     HumanA(std::string name, Weapon &weap);
     ~HumanA(void);
 
-    void attack(void) const;
+    void 	attack(void) const;
+	Weapon &getWeapon(void) const;
+	void	setWeapon(Weapon const & weap);
+
 
 private:
 
