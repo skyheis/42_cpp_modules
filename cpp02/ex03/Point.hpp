@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/17 19:14:49 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/17 19:53:47 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/19 11:58:50 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ private:
     Fixed const _y;
 
 };
+
+bool bsp(Point const a, Point const b, Point const c, Point const point);
 
 #endif /* POINT_HPP */
