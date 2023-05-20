@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 14:04:32 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 15:23:34 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 18:34:19 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int main(int ac, char **av)
     std::string sin = av[2];
     std::string sout = av[3];
 
-    tmp.append(".reaplce");
+    tmp.append(".replace");
     repfile.open(tmp.c_str());
     
     while (std::getline(infile, tmp))

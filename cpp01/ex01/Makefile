@@ -1,6 +1,6 @@
 ###### VARIABLE ######
 
-NAME = horde
+NAME = zombiehorde
 
 SRC = main.cpp Zombie.cpp zombieHorde.cpp
 

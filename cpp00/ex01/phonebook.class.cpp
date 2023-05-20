@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/15 15:32:04 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 09:21:10 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 16:05:45 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,10 +61,13 @@ void PhoneBook::search(void) const {
 void PhoneBook::printCont(int i) const {
     if (i > this->_i)
         return ;
+    i--;
     std::cout << "Index: " << this->book[i].getInd() << std::endl;
     std::cout << "Firstname: " << this->book[i].getFirst() << std::endl;
     std::cout << "Lastname: " << this->book[i].getLast() << std::endl;
     std::cout << "Nickname: " << this->book[i].getNick() << std::endl;
+    std::cout << "Phonenumber: " << this->book[i].getNumber() << std::endl;
+    std::cout << "Darkest secret: " << this->book[i].getSecret() << std::endl;
 }
 
 int PhoneBook::getI(void) const {

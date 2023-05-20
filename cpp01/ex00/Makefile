@@ -1,6 +1,6 @@
 ###### VARIABLE ######
 
-NAME = zombiehorde
+NAME = zombie
 
 SRC = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 

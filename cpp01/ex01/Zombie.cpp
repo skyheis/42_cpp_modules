@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 10:07:34 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/16 11:08:54 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/20 17:39:25 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void    Zombie::setName(std::string name) {
 Zombie* newZombie(std::string name) {
     return (new Zombie(name));
 }
+
 void randomChump(std::string name) {
     Zombie bob(name);
     
