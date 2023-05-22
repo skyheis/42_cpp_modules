@@ -1,38 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.class.hpp                                 :+:      :+:    :+:   */
+/*   Cure.class.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 18:12:33 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/22 22:42:03 by ggiannit         ###   ########.fr       */
+/*   Created: 2023/05/22 22:35:02 by ggiannit          #+#    #+#             */
+/*   Updated: 2023/05/22 22:35:21 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
-#include "ICharacter.class.hpp"
+#include "AMateria.class.hpp"
 
-class AMateria {
+class Cure : public AMateria {
 
 public:
 
-	AMateria(void);
-	AMateria(std::string const & type);
-	AMateria(AMateria const &src);
-	~AMateria(void);
+	Cure(void);
+	Cure(std::string const & type);
+	Cure(Cure const &src);
+	~Cure(void);
 
-	AMateria &operator=(AMateria const &rhs);
+	Cure &operator=(Cure const &rhs);
 	
-	std::string const & getType() const; //Returns the materia type
-	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
+	AMateria* clone() const;
+	void use(ICharacter& target);
 
-protected:
-
-	std::string	_type;
-
-};
+}
