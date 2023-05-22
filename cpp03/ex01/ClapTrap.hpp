@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:41:11 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/21 18:10:44 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/22 09:15:38 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ public:
 	void	attack(const std::string& target);
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
-
-	std::string		getName(void) const;
-	unsigned int	getHp(void) const;
-	unsigned int	getStamina(void) const;
-	unsigned int	getAttackDamage(void) const;
 
 protected:
 

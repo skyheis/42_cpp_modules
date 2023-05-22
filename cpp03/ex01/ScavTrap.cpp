@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 17:37:41 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/21 18:22:53 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/22 09:16:26 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,10 @@ ScavTrap::~ScavTrap(void) {
 }
 
 ScavTrap& ScavTrap::operator=(ScavTrap const &rhs) {
-	this->_name = rhs.getName();
-	this->_hp = rhs.getHp();
-	this->_stamina = rhs.getStamina();
-	this->_attackdamage = rhs.getAttackDamage();
+	this->_name = rhs._name;
+	this->_hp = rhs._hp;
+	this->_stamina = rhs._stamina;
+	this->_attackdamage = rhs._attackdamage;
 	return (*this);
 }
 
@@ -56,5 +56,5 @@ void	ScavTrap::attack(const std::string& target) {
 }
 
 void	ScavTrap::guardGate(void) {
-	std::cout << this->getName() << " is now in Gatekeeper mode" << std::endl;
+	std::cout << this->_name << " is now in Gatekeeper mode" << std::endl;
 }

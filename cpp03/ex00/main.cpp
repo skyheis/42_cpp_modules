@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 16:24:58 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/21 16:42:50 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/22 09:13:40 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	main(void)
 	popi.beRepaired(11);
 	popi.beRepaired(11);
 	popi.beRepaired(11);
-	std::cout << std::endl << popi.getName() << "'s stamina is " << popi.getStamina() << std::endl << std::endl;
+	//std::cout << std::endl << "popi's stamina is " << popi.getStamina() << std::endl << std::endl;
 	popi.beRepaired(11);
 	popi.beRepaired(11);
 	popi.beRepaired(11);

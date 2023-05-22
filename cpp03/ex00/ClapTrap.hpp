@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:41:11 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/21 17:31:23 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/22 09:15:03 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,6 @@ public:
 	void	takeDamage(unsigned int amount);
 	void	beRepaired(unsigned int amount);
 
-	std::string		getName(void) const;
-	unsigned int	getHp(void) const;
-	unsigned int	getStamina(void) const;
-	unsigned int	getAttackDamage(void) const;
-
 private:
 
 	std::string		_name;
@@ -46,3 +41,24 @@ private:
 };
 
 #endif /* CLAPTRAP_H */
+
+// std::string		getName(void) const;
+// unsigned int	getHp(void) const;
+// unsigned int	getStamina(void) const;
+// unsigned int	getAttackDamage(void) const;
+
+// std::string		ClapTrap::getName(void) const {
+// 	return (this->_name);
+// }
+
+// unsigned int	ClapTrap::getHp(void) const {
+// 	return (this->_hp);
+// }
+
+// unsigned int	ClapTrap::getStamina(void) const {
+// 	return (this->_stamina);
+// }
+
+// unsigned int	ClapTrap::getAttackDamage(void) const {
+// 	return (this->_attackdamage);
+// }

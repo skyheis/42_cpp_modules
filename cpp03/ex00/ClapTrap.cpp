@@ -6,13 +6,13 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/21 14:39:58 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/21 18:25:49 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/05/22 09:22:44 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(void) : _name(""), _hp(10), _stamina(10), _attackdamage(0) {
+ClapTrap::ClapTrap(void) : _name("unamed"), _hp(10), _stamina(10), _attackdamage(0) {
 	std::cout << "ClapTrap constructor called without the name" << std::endl;
 }
 
@@ -30,29 +30,12 @@ ClapTrap::~ClapTrap(void) {
 }
 
 ClapTrap& ClapTrap::operator=(ClapTrap const &rhs) {
-	this->_name = rhs.getName();
-	this->_hp = rhs.getHp();
-	this->_stamina = rhs.getStamina();
-	this->_attackdamage = rhs.getAttackDamage();
+	this->_name = rhs._name;
+	this->_hp = rhs._hp;
+	this->_stamina = rhs._stamina;
+	this->_attackdamage = rhs._attackdamage;
 	return (*this);
 }
-
-std::string		ClapTrap::getName(void) const {
-	return (this->_name);
-}
-
-unsigned int	ClapTrap::getHp(void) const {
-	return (this->_hp);
-}
-
-unsigned int	ClapTrap::getStamina(void) const {
-	return (this->_stamina);
-}
-
-unsigned int	ClapTrap::getAttackDamage(void) const {
-	return (this->_attackdamage);
-}
-
 
 void	ClapTrap::attack(const std::string& target) {
 	if (this->_stamina > 0)
