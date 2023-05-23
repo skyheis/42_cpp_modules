@@ -2,13 +2,14 @@
 
 NAME = interface
 
-SRC = main.cpp 
+SRC = main.cpp AMateria.class.cpp Character.class.cpp \
+		Cure.class.cpp Ice.class.cpp MateriaSource.class.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
 CC = c++
 
-CFLAGS = -Wall -Wextra -Werror -std=c++98
+CFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 
 %.o: %.cpp
 	@echo "$(GREEN)Compiling:$(BLUE) $< $(DEF_COLOR)"

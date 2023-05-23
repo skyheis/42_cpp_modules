@@ -1,41 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   AMateria.class.hpp                                 :+:      :+:    :+:   */
+/*   Character.class.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/22 18:12:33 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/05/23 11:50:05 by ggiannit         ###   ########.fr       */
+/*   Created: 2023/05/23 09:41:19 by ggiannit          #+#    #+#             */
+/*   Updated: 2023/05/23 11:47:22 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#pragma once 
 
-#include <iostream>
-#include <string>
 #include "ICharacter.class.hpp"
 
-class ICharacter;
-
-class AMateria {
+class Character : public ICharacter {
 
 public:
 
-	AMateria(void);
-	AMateria(std::string const & type);
-	AMateria(AMateria const &src);
-	virtual ~AMateria(void);
+	Character(void);
+	Character(std::string name);
+	Character(Character const &src);
+	~Character(void);
 
-	AMateria &operator=(AMateria const &rhs);
-	
-	std::string const & getType() const; //Returns the materia type
-	virtual AMateria* clone() const = 0;
-	virtual void use(ICharacter& target);
+	Character &operator=(Character const &rhs);
 
-protected:
+	std::string const & getName(void) const;
+	void equip(AMateria* m);
+	void unequip(int idx);
+	void use(int idx, ICharacter& target);
 
-	std::string	_type;
+private:
+
+	std::string	_name;
+	AMateria	*_inventory[4];
+	AMateria	*_floor;
 
 };
-
