@@ -1,6 +1,6 @@
 ###### VARIABLE ######
 
-NAME = form
+NAME = moreform
 
 SRC = main.cpp Bureaucrat.cpp AForm.cpp \
 		ShrubberyCreationForm.cpp \
