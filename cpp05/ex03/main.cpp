@@ -6,14 +6,42 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/15 11:42:02 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/16 09:33:27 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/16 10:46:40 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include "PresidentialPardonForm.hpp"
+
+int main(void) {
+	Intern someRandomIntern;
+	AForm* rrf;
+	Bureaucrat	sosi("Doo", 1);
+
+	rrf = someRandomIntern.makeForm("robotomy request", "Bender");
+	sosi.signForm(*rrf);
+	sosi.executeForm(*rrf);
+	std::cout << std::endl;
+	delete rrf;
+	rrf = someRandomIntern.makeForm("presidential pardon", "Bender");
+	sosi.signForm(*rrf);
+	sosi.executeForm(*rrf);
+	std::cout << std::endl;
+	delete rrf;
+	rrf = someRandomIntern.makeForm("shrubbery creation", "Bender");
+	sosi.signForm(*rrf);
+	sosi.executeForm(*rrf);
+	std::cout << std::endl;
+	delete rrf;
+	rrf = someRandomIntern.makeForm("shrubbery", "Bender");
+	rrf = someRandomIntern.makeForm("caporti request", "Bender");
+	std::cout << std::endl;
+	delete rrf;
+
+}
 
 /* ShrubberyCreationForm */
 /* int	main(void){
@@ -85,7 +113,7 @@
 } */
 
 /* test uno */
-int	main(void){
+/* int	main(void){
 	Bureaucrat	loli("Romolo", 140);
 	ShrubberyCreationForm a20("home");
 
@@ -116,4 +144,4 @@ int	main(void){
 	sosi.executeForm(b20);
 	sosi.signForm(c20);
 	sosi.executeForm(c20);
-}
+} */
