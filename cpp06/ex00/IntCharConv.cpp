@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 16:17:02 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/16 19:11:23 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/17 12:00:35 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ bool isDouble(std::string const &str) {
 	double d;
 
 	ss >> d;
-	return (ss.eof() && !ss.fail());
+	return (ss.eof());// && !ss.fail());
 }
 
 bool isFloat(std::string const &str) {
@@ -63,11 +63,28 @@ std::string str2int(int &i, char const *s, int base)
     return "OK";
 }
 
-
-
-
-
-
+void printType(int i) {
+	std::cout << "Input is a ";
+	switch (i)
+	{
+	case 0:
+		std::cout << "char" << std::endl;
+		break;
+	case 1:
+		std::cout << "int" << std::endl;
+		break;
+	case 2:
+		std::cout << "float" << std::endl;
+		break;
+	case 3:
+		std::cout << "double" << std::endl;
+		break;
+	default:
+		std::cout << "funny error" << std::endl;
+		break;
+	}
+		
+}
 
 
 // void	printChar(std::string const &str) {
@@ -81,8 +98,6 @@ std::string str2int(int &i, char const *s, int base)
 // 	std::cout << std::fixed << std::setprecision(1) << "float: " << static_cast<float>(c) << "f" << std::endl;
 // 	std::cout << std::fixed << std::setprecision(1) << "double: " << static_cast<double>(c) << std::endl;
 // }
-
-
 
 // void	printInt(std::string const &str) {
 // 	int i;

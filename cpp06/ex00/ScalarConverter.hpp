@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 15:19:28 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/16 19:50:36 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/17 12:07:56 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@
 #include <cstdlib>
 #include <cerrno>
 #include <iomanip>
-// #include <stdlib.h> 
 
 class ScalarConverter {
 
@@ -33,6 +32,8 @@ private:
 	static int		_i;
 	static float	_f;
 	static double	_d;
+	static bool		_posChar;
+	static bool		_posInt;
 
 	ScalarConverter(void);
 	ScalarConverter(ScalarConverter const & src);
@@ -55,3 +56,4 @@ bool isChar(std::string const &str);
 bool isInt(std::string const &str);
 bool isFloat(std::string const &str);
 bool isDouble(std::string const &str);
+void printType(int i);

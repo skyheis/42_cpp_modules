@@ -2,7 +2,7 @@
 
 NAME = convert
 
-SRC = main.cpp ScalarConverter.cpp IntCharConv.cpp DoubleFloatConv.cpp
+SRC = main.cpp ScalarConverter.cpp IntCharConv.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
