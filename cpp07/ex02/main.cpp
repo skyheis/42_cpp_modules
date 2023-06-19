@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 19:58:51 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/18 20:38:27 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/19 09:27:58 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,13 +76,17 @@ int main(int, char**)
     {
         numbers[i] = rand();
     }
+	// std::cout << numbers << std::endl;
 	delete [] mirror;//
     
-	Array<int> tmp[3];
+	Array<int> tmp(3);
 	for (int i = 0; i < 3; i++)
 		tmp[i] = i;
-
+	Array<std::string> loli(3);
+	for (int i = 0; i < 3; i++)
+		loli[i] = "culo";
 	std::cout << tmp << std::endl;
+	std::cout << loli << std::endl;
 
 	return 0;
 }

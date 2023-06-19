@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/18 19:50:08 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/18 20:52:57 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/19 09:26:36 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,13 +63,13 @@ private:
 
 };
 
-// template <typename T>
-// std::ostream	&operator<<(std::ostream &out, Array<T> const &src) {
-// 	out << "[ ";
-// 	for (size_t i = 0; i < src.size(); i++)
-// 		out << src[i] << " ";
-// 	out << "]";
-// 	return (out);
-// }
+template <typename T>
+std::ostream	&operator<<(std::ostream &out, Array<T> &src) {
+	out << "[ ";
+	for (size_t i = 0; i < src.size(); i++)
+		out << src[i] << " ";
+	out << "]";
+	return (out);
+}
 
 #endif
