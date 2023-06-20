@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 16:07:24 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/19 19:24:29 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/20 16:03:06 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	Span& operator=(Span const &rhs);
 
 	void addNumber(int i);
+	void addBigSize(long unsigned int much);
+	void addBigSize(long unsigned int much, long unsigned int max);
 	int shortestSpan(void);
 	int longestSpan(void);
 
@@ -52,9 +54,23 @@ public:
 			return ("Only one element in class!");
 		}
 	};
+	class RangeErrorException : public std::exception {
+		virtual const char *what() const throw() {
+			return ("The range asked is to big for this Span!");
+		}
+	};
 	
 private:
 	long unsigned int	_size;
 	std::vector<int>	_stack;
 
 };
+
+template <typename T>
+void	print(T &arr) {
+	typename T::iterator it;
+	for (it = arr.begin(); it != arr.end(); ++it) {
+		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
+}
