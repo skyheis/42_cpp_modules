@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/19 11:40:56 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/20 16:13:12 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/21 09:24:55 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,4 +28,13 @@ typename T::iterator easyfind(T &arr, int i)
 	// 	if (i == arr[x])
 	// 		return (x);
 	// }
+}
+
+template <typename T>
+void	print(T &arr) {
+	typename T::iterator it;
+	for (it = arr.begin(); it != arr.end(); ++it) {
+		std::cout << *it << " ";
+	}
+	std::cout << std::endl;
 }
