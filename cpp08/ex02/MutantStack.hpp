@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/20 16:37:38 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/20 19:27:20 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/21 09:13:52 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,19 @@ public:
 	};
 
 	typedef typename std::stack<T>::container_type::iterator iterator;
+	typedef typename std::stack<T>::container_type::const_iterator const_iterator;
 
 	iterator begin(void) {
 		return std::stack<T>::c.begin();
 	};
 	iterator end(void) {
+		return std::stack<T>::c.end();
+	};
+
+	const_iterator begin(void) const {
+		return std::stack<T>::c.begin();
+	};
+	const_iterator end(void) const {
 		return std::stack<T>::c.end();
 	};
 };
