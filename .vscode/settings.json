@@ -75,7 +75,8 @@
 		"__string": "cpp",
 		"chrono": "cpp",
 		"truefalsecolor": "cpp",
-		"list": "cpp"
+		"list": "cpp",
+		"map": "cpp"
 	},
 	"C_Cpp.errorSquiggles": "disabled"
 }
