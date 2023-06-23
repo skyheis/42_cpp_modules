@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 10:29:29 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/23 00:49:58 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/23 18:28:22 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,9 @@
 #include <fstream>
 #include <string>
 #include <cstdlib>
+#include <exception>
+#include <limits>
+#include <iomanip>
 #include <map>
 
 class BitcoinExchange {
