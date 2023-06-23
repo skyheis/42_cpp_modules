@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/23 18:31:58 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/23 19:55:26 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/23 21:55:05 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,4 +57,3 @@ void	ft_rpn(char *s) {
 		throw std::exception();
 		
 }
-
