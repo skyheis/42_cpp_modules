@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/21 10:29:10 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/23 00:49:57 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/24 20:21:31 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,8 +59,7 @@ void	BitcoinExchange::makeDb(std::string infile) {
 	{
 		key = tmp.substr(0, 10);
 		value = convFloat(tmp.substr(12));
-		// std::cout << "date:  " << key << std::endl;
-		// std::cout << "valie: " << value << std::endl << std::endl;
+		// std::cout << key << " " << value << std::endl;
 		this->_map.insert(std::pair<std::string, float>(key, value));
 	}
 }
@@ -169,8 +168,8 @@ void	BitcoinExchange::getValue(std::string line) const {
 	date[7] = '-';
 	float	btcvalue = convFloat(line.substr(12));
 	std::map<std::string, float>::const_iterator it = this->_map.lower_bound(date);
-
-	// if (it == this->_map.end())
-	// 	return ;
+	it--;
+	
+	std::cout << it->first << " is the last date" <<  std::endl;
 	std::cout << date << " => " << std::fixed << std::setprecision(2) << btcvalue << " = " << it->second * btcvalue << std::endl;
 }

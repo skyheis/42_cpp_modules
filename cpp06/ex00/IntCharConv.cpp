@@ -6,7 +6,7 @@
 /*   By: ggiannit <ggiannit@student.42firenze.it    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/16 16:17:02 by ggiannit          #+#    #+#             */
-/*   Updated: 2023/06/23 00:49:54 by ggiannit         ###   ########.fr       */
+/*   Updated: 2023/06/24 15:00:40 by ggiannit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ bool isChar(std::string const &str) {
 
 bool isInt(std::string const &str) {
 	std::stringstream ss(str);
-	int i;
+	unsigned sint i;
 
 	ss >> i;
 	return (ss.eof() && !ss.fail());
